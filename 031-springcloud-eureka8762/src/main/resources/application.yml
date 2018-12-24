@@ -1,0 +1,11 @@
+server:
+  port: 8762
+eureka:
+  client:
+#  禁止向eureka服务注册中心 注册自己
+    register-with-eureka: false
+#    指定集群环境下的 另外的eureka 服务器地址
+    service-url:
+      defaultZone: http://eureka8761:8761
+  instance:
+    hostname: eureka8762
