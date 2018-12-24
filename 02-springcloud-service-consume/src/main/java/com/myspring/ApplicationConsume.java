@@ -11,7 +11,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
   //@SpringCloudApplication   这个注解可以替换 SpringBootApplication  和 EnableCircuitBreaker
 public class ApplicationConsume {
-
+//    测试修改
     public static void main(String[] args) {
         SpringApplication.run(ApplicationConsume.class, args);
     }
