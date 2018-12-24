@@ -1,0 +1,21 @@
+server:
+  port: 8082
+#在eureka注册中心的名称
+spring:
+  application:
+    name: consume
+eureka:
+  client:
+    service-url:
+          defaultZone: http://eureka8761:8761/eureka,http://eureka8762:8762/eureka
+#Spring  boot 向外暴露的接口
+#这个是用来暴露endpoints  的,由于 endpoints 中会包含很多敏感的信息,除了health 和info 可以直接访问外,别的默认不能访问
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+feign:
+  hystrix:
+    enabled: true
