@@ -1,0 +1,10 @@
+server:
+  port: 8761
+eureka:
+  client:
+    service-url:
+         defaultZone: http://eureka8762:8762
+#         禁止向自己注册
+    register-with-eureka:  false
+  instance:
+    hostname:  eureka8761

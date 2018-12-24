@@ -1,0 +1,14 @@
+server:
+  port: 8089
+
+#服务名称   一般和项目名称保持一致
+#注册中心地址
+spring:
+  application:
+    name: privider
+  freemarker:
+    prefer-file-system-access: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8761:8761/eureka,http://eureka8762:8762/eureka
