@@ -1,0 +1,12 @@
+server:
+  port: 8762
+eureka:
+  client:
+    service-url:
+         defaultZone: http://eureka8761:8761
+#         禁止向自己注册
+    register-with-eureka:  false
+#    不去发现服务
+    fetch-registry:  false
+  instance:
+    hostname:  eureka8762
