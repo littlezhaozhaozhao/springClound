@@ -1,0 +1,30 @@
+server:
+  port: 5000
+#  在eureka 服务注册中心的名称
+spring:
+  application:
+    name:  06-springcloud-zuul
+#    eureka 服务注册中心地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8761:8761/eureka,http://eureka8762:8762/eureka
+zuul:
+  routes:
+#    123:
+#      path: /**     对访问路径的请求转发
+#      serviceId: consume  转发到consume 中
+#对 consume 的访问转发
+    consume: /apiconsume/**
+#      禁用 默认的filter 过滤器   用自己的 异常处理过滤器
+#  SendErrorFilter:
+#    error:
+#      disable: true
+#      对路径中有hello的进行忽略
+#  ignored-patterns:
+#  加入统一的访问前缀
+  prefix:  /api
+#      忽略的服务不进行转发   只对配置的进行转发
+#  ignored-services:  "*"
+
+
